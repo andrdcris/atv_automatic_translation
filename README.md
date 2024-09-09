@@ -52,20 +52,6 @@ for examples in [2, 4, 6, None]:
     print(f"Target vocab size: {target_vocab_size}\n")
 
 RESULTADO
-15]
-0s
-# Função tokenize_nmt já definida
-def tokenize_nmt(text, num_examples=None):
-    """Tokenize the English-French dataset."""
-    source, target = [], []
-    for i, line in enumerate(text.split('\n')):
-        if num_examples and i > num_examples:
-            break
-        parts = line.split('\t')
-        if len(parts) == 2:
-            source.append(parts[0].split(' '))
-…    print(f"Target vocab size: {target_vocab_size}\n")
-
 Num examples: 2
 Source vocab size: 9
 Target vocab size: 9
