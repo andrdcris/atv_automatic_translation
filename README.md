@@ -85,5 +85,15 @@ Target vocab size: 18
 ```
 2. O texto em alguns idiomas, como chinês e japonês, não tem indicadores de limite de palavras (por exemplo, espaço). A tokenização em nível de palavra ainda é uma boa ideia para esses casos? Por que ou por que não?
    
-    A tokenização em nível de palavra não é a melhor abordagem para chinês e japonês, pois esses idiomas não possuem delimitadores de palavras explícitos, como espaços entre as palavras. Um único bloco de texto pode conter várias palavras, mas sem delimitação explícita entre elas, o que torna difícil identificar os limites das palavras de forma direta. Sem espaços, pode haver ambiguidade ao tentar separar palavras. 
+    A tokenização em nível de palavra não é a melhor abordagem para chinês e japonês, pois esses idiomas não possuem delimitadores de palavras explícitos, como espaços entre as palavras. Um único bloco de texto pode conter várias palavras, mas sem delimitação explícita entre elas, o que torna difícil identificar os limites das palavras de forma direta. Sem espaços, pode haver ambiguidade ao tentar separar palavras.
+   
+- FONTE NO TEXTO:
+```
+   Diferente da tokenização em nível de personagem in:numref:sec_language_model, para tradução automática
+ preferimos tokenização em nível de palavra aqui (modelos de última geração podem usar técnicas de tokenização
+mais avançadas). A seguinte função tokenize_nmt tokeniza os primeiros pares de sequência de texto num_examples,
+Onde cada token é uma palavra ou um sinal de pontuação. Esta função retorna duas listas de listas de tokens:
+source etarget. Especificamente, source [i] é uma lista de tokens do  sequência de texto no idioma de origem
+(inglês aqui) e target [i] é a do idioma de destino (francês aqui).
+```
 
